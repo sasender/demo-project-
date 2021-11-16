@@ -34,7 +34,7 @@
     "path": "/tmp/node_debug.log"
   },
   "server" : {
-    "baseURL" : "http://3.237.101.221:51005",
+    "baseURL" : "http://3.231.202.170:51005",
     "port" : 51005
   }
 }
