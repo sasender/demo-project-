@@ -1,9 +1,11 @@
-FROM node:9-slim
-WORKDIR /usr/src/app
-COPY package.json .
-RUN npm install
-COPY . /app
-EXPOSE 51005
-#NODE_ENV=production node app.js
+FROM node:12-alpine
 
-CMD ["node", "index.js"]
+WORKDIR /usr/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 51005
