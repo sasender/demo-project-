@@ -4,6 +4,6 @@ COPY package.json .
 RUN npm install
 COPY . /app
 EXPOSE 51005
-ENV  NODE_ENV=test, node index.js
+NODE_ENV=production node app.js
 
 CMD ["npm", "start"]
