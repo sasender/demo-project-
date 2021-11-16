@@ -1,0 +1,34 @@
+version: '3'
+services:
+  node:
+    restart: always
+    build: .
+    ports:
+      - 51005:51005
+    environment: 
+      MYSQL_HOST: mysqldb
+    volumes:
+      - ./:/code
+  mongo:
+    image: mongo
+    hostname: mongo-hostname
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+  mysqldb:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: backend_test_mysql
+    ports:
+      - 3306:3306
+    volumes: 
+      - db-config:/etc/mysql
+      - db-data:/var/lib/mysql
+      - ./db/backup/files/:/data_backup/data
+volumes:
+ mongodb:
+ db-config:
+ db-data:
