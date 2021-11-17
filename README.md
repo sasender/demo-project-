@@ -11,3 +11,4 @@ docker logs conatainer id or conatainer name  thse comand helps me to show the l
 i entering to my running containers using docker exec -it container name bash 
 after my checking all containers its all have been activated mode and its are open to conecting the server 
 by using my public ip :51005 
+https://github.com/sasender/demo-project-/issues/1#issue-1055983798
